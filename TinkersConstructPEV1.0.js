@@ -126,8 +126,9 @@ Texture.Item.Chunk.Flint = "chunk_flint";
 
 var TinkersConstruct = {};
 
-TinkersConstruct.setItem = function(id,texture,textureData,name,maxStackSize){   ModPE.setItem(id,texture,textureData,name,maxStackSize);
-}
+TinkersConstruct.setItem = function(id,texture,textureData,name,maxStackSize){ModPE.setItem(id,texture,textureData,name,maxStackSize);}
+TinkersConstruct.setBlock = function(i,n,t,m,o,r,ll,lo,d,e){Block.defineBlock(i,n,t,m,o,r);Block.setLightLevel(i,ll);Block.seLightOpacity(i,lo);Block.setDestroyTime(i,d);Block.setExplosionResistance(i,e);}
+
 
 TinkersConstruct.setItem(ID.Item.Rod.Wood,Texture.Item.Rod.Wood,0,"Wooden Rod",64);
 TinkersConstruct.setItem(ID.Item.Chunk.Wood,Texture.Item.Chunk.Wood,0,"Wooden Chunk",64);
